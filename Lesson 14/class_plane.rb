@@ -35,3 +35,8 @@ puts "Plane moving: #{plane1.moving?}"
 plane1.land
 puts "Model: #{plane1.model} Speed: #{plane1.speed} Alt: #{plane1.alt}"
 puts "Plane moving: #{plane1.moving?}"
+
+plane2=Airplane.new('TU-154')
+plane2.fly
+puts "Model: #{plane2.model} Speed: #{plane2.speed} Alt: #{plane2.alt}"
+puts "Plane moving: #{plane2.moving?}"
