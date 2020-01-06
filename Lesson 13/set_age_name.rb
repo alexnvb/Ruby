@@ -19,6 +19,6 @@ loop do
     age=gets.to_i
     
     set_name_age option={name:name,age:age}
-        
+
     show_hash
 end

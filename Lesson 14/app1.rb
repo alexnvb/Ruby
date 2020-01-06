@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Book
   def initialize
     @hh={}
@@ -6,7 +5,7 @@ class Book
     @age=0
   end
 
-  def add_person @name, age
+  def add_person @name, @age
         @hh={name=>age}
   end
 
@@ -28,5 +27,5 @@ app=Book.new
 
 
 app.enter_info
-app.add_person @name,@age
+app.add_person @name, @age
 app.show
