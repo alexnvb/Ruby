@@ -1,0 +1,12 @@
+Jan, 1100
+Feb, 2200
+Mar, 540
+Apr, 850
+May, 1270
+Jun, 3070
+Jul, 2750
+Aug, 3000
+Sep, 290
+Oct, 445
+Nov, 680
+Dec, 990
