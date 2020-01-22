@@ -22,4 +22,3 @@ s.each do |w|
   print "#{hash_dict[w]} "
   sleep 0.5
 end
-
