@@ -1,3 +1,4 @@
+
 puts "Enter you password: "
 pass=gets.strip
 
@@ -6,7 +7,9 @@ while (line=input.gets)
   line.strip!
   if pass.include? line
     puts "Bad password"
+  else
+    puts "Good password"
     exit
   end
 end
-puts "Good password"
+
