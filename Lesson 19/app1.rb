@@ -1,10 +1,19 @@
 
 require 'sinatra'
+
 get '/' do
   erb :index
 end
 
 post '/' do
   @login = params[:aaa]
-  erb :index
+  @password = params[:bbb]
+
+  if @login == 'admin' && @password == 'secret'
+    erb :welcome
+  else
+    @message = 'Access denied'
+    erb :index
+  end
+
 end
