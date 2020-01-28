@@ -5,5 +5,6 @@ get '/' do
 end
 
 post '/' do
+  @login = params[:aaa]
   erb :index
 end
