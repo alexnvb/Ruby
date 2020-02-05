@@ -19,10 +19,6 @@ post '/' do
   f.write "User: #{@user_name} Phone: #{@phone} Date: #{@date_time}"
   f.close
 
-  if @login=="admin" && @password=="admin"
-    erb :welcome
-  end
-  
   erb :message
 
 end
