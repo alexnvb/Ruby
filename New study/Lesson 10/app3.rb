@@ -1,26 +1,27 @@
 
 arr=[]
-human=[]
+
 
 loop do
+  human=[]
   puts "Enter name to add"
   name=gets.strip
-  puts "Enter age"
-  age=gets.to_i
-
   if name==""
     break
   end
+  puts "Enter age"
+  age=gets.to_i
+
+
 
   human<<name
   human<<age
+
+  arr<<human
 end
 
-arr<<human
-
-puts arr
-#x=0
-#arr.each do |name|
-#  x=x+1
-#  puts "#{x} #{name}"
-#end
+x=0
+arr.each do |item|
+  x=x+1
+  puts "#{x} #{item[0]} #{item[1]}"
+end
