@@ -3,9 +3,14 @@ class Animal
   def run
     puts "I am runing"
   end
+
+  def jump
+    puts 'I am jumping'
+  end
 end
 
 a=Animal.new
 a.run
 
-puts a
+b=Animal.new
+b.jump
