@@ -21,4 +21,13 @@ post '/' do
 
   erb :message
 
+  if @login=='admin' && @password=='admin'
+    @arr=[]
+    input=File.open("users.txt","r")
+      while (line=input.gets)
+        @users_date=line.chomp
+       end
+    erb :users
+  end
+
 end
