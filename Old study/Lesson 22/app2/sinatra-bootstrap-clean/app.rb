@@ -20,10 +20,11 @@ post '/visit' do
 	@phone=params[:phone]
 	@time=params[:time]
   @barber=params[:barber]
+  @color=params[:color]
 
   #f = File.open '/public/users.txt', 'a'
   #f.write "User: #{@customer_name} Phone: #{@phone} Date: #{@time}"
   #f.close
 
-	erb "Ok, #{@customer_name},#{@phone},#{@time},#{@barber}"
+	erb "Ok, #{@customer_name},#{@phone},#{@time},#{@barber},#{@color}"
 end
