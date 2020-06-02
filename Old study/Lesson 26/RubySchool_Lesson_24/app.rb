@@ -3,6 +3,10 @@ require 'sinatra'
 require 'sqlite3'
 require 'sinatra/reloader'
 
+def get_base
+	return SQLite3::Database.new 'base.db'
+end
+
 configure do
   db=get_base
   db.execute 'CREATE TABLE IF NOT EXISTS
@@ -56,12 +60,8 @@ post '/visit' do
 			datestamp,
 			barber,
 			color)
-		values(?, ?, ?, ?, ?)',[@user_name, @phone, @datetime, @barber, @color]
+		values(?, ?, ?, ?, ?)',[@username, @phone, @datetime, @barber, @color]
 
 	erb "OK, username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
 
-end
-
-def get_base
-	return SQLite3::Database.new 'base.db'
 end
