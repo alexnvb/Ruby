@@ -65,3 +65,12 @@ post '/visit' do
 	erb "OK, username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
 
 end
+
+get '/showusers' do
+  db=get_base
+  db.execute 'select * from users' do |row|
+    puts row
+    puts "______"
+  end
+  erb :showusers
+end
