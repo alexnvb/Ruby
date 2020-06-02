@@ -4,7 +4,9 @@ require 'sqlite3'
 require 'sinatra/reloader'
 
 def get_base
-	return SQLite3::Database.new 'base.db'
+	db=SQLite3::Database.new 'base.db'
+	db.results_as_hash=true
+	return db
 end
 
 configure do
