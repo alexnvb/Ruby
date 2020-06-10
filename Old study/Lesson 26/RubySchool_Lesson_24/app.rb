@@ -71,8 +71,7 @@ end
 get '/showusers' do
   db=get_base
   db.execute 'select * from users' do |row|
-    puts row
-    puts "______"
+    row
   end
-  erb :showusers
+  erb row['username']
 end
