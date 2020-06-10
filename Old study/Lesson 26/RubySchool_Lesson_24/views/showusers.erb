@@ -1,2 +1,15 @@
 <h2>Записаные клиенты</h2>
 <p>На этой странице кто записался к нам в Barber Shop</p>
+
+
+<table class="table">
+  <% @results.each  do |row| %>
+    <tr>
+      <td><%= row['username'] %></td>
+      <td><%= row['phone'] %></td>
+      <td><%= row['datetime'] %></td>
+      <td><%= row['barber'] %></td>
+      <td><%= row['color'] %></td>
+    </tr>
+  <% end %>
+</table>

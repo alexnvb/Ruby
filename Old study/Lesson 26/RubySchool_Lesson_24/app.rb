@@ -70,8 +70,6 @@ end
 
 get '/showusers' do
   db=get_base
-  db.execute 'select * from users' do |row|
-    row
-  end
-  erb row['username']
+  @results = db.execute 'select * from Users order by id desc'
+  erb :showusers
 end
